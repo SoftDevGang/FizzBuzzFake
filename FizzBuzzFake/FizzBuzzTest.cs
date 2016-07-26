@@ -24,12 +24,16 @@ namespace FizzBuzzFake
                 first += Convert(i) + ",";
             
             }
-            first += "Fizz,";
             return string.Format("{0}4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,18,19,Buzz", first);
         }
 
         private static string Convert(int input)
         {
+            if (input == 3)
+            {
+                return  "Fizz";
+                
+            }
             return "" + input;
         }
     }
