@@ -19,17 +19,17 @@ namespace FizzBuzzFake
         public static string Print(int top)
         {
             string first ="";
-            for (int i = 1; i <= 5; i++)
+            for (int i = 1; i <= 6; i++)
             {
                 first += Convert(i) + ",";
             
             }
-            return string.Format("{0}Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,18,19,Buzz", first);
+            return string.Format("{0}7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,18,19,Buzz", first);
         }
 
         private static string Convert(int input)
         {
-            if (input == 3)
+            if (input % 3 == 0)
             {
                 return  "Fizz";
                 
