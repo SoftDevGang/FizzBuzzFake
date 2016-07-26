@@ -18,11 +18,11 @@ namespace FizzBuzzFake
     {
         public static string Print(int top)
         {
-            var first = Convert();
+            var first = Convert(1);
             return string.Format("{0},2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,18,19,Buzz", first);
         }
 
-        private static string Convert()
+        private static string Convert(int input)
         {
             return "1";
         }
