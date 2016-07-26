@@ -24,7 +24,7 @@ namespace FizzBuzzFake
 
         private static string Convert(int input)
         {
-            return "1";
+            return "" + input;
         }
     }
 }
