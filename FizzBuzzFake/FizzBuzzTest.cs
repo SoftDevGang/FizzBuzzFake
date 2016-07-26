@@ -9,7 +9,7 @@ namespace FizzBuzzFake
         [TestMethod]
         public void TestFizzBuzz()
         {
-            string expected = "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,18,19,Buzz";
+            string expected = "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
             Assert.AreEqual(expected, FizzBuzz.Print(20));
         }
     }
@@ -19,21 +19,25 @@ namespace FizzBuzzFake
         public static string Print(int top)
         {
             string first ="";
-            for (int i = 1; i <= 14; i++)
+            for (int i = 1; i <= top; i++)
             {
-                first += Convert(i) + ",";
+                first +="," + Convert(i) ;
             
             }
-            return string.Format("{0}FizzBuzz,16,17,Fizz,18,19,Buzz", first);
+            return first.Substring(1);
         }
 
         private static string Convert(int input)
         {
-            if (input % 3 == 0)
+            if (input % 15 == 0)
             {
-                return  "Fizz";
-                
-            }if (input % 5 == 0)
+                return "FizzBuzz";
+
+            } if (input % 3 == 0)
+            {
+                return "Fizz";
+
+            } if (input % 5 == 0)
             {
                 return  "Buzz";
                 
