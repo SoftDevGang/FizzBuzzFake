@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FizzBuzzFake
@@ -18,13 +19,8 @@ namespace FizzBuzzFake
     {
         public static string Print(int top)
         {
-            string first ="";
-            for (int i = 1; i <= top; i++)
-            {
-                first +="," + Convert(i) ;
-            
-            }
-            return first.Substring(1);
+            var parts = Enumerable.Range(1, top).Select(n => Convert(n)).ToArray();
+            return String.Join(",",parts);
         }
 
         private static string Convert(int input)
