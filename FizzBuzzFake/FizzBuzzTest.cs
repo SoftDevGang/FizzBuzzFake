@@ -19,7 +19,7 @@ namespace FizzBuzzFake
         public static string Print(int top)
         {
             string first ="";
-            for (int i = 1; i < 3; i++)
+            for (int i = 1; i <= 3; i++)
             {
                 first += Convert(i) + ",";
             
